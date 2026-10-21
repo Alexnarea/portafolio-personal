@@ -1,0 +1,161 @@
+
+.app {
+  min-height: 100vh;
+  background: #090e1b;
+  color: #f5f7ff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 7%;
+  border-bottom: 1px solid #202b42;
+  gap: 24px;
+}
+
+.logo {
+  color: #a99aff;
+  font-size: 21px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.navbar nav a {
+  color: #bdc5d8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar nav a:hover {
+  color: #a99aff;
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 90px 10%;
+  background:
+    radial-gradient(
+      ellipse at 80% 20%,
+      #282054 0%,
+      transparent 50%
+    );
+}
+
+.eyebrow {
+  color: #aa9aff;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  max-width: 850px;
+  font-size: clamp(38px, 5vw, 72px);
+  line-height: 1.12;
+  margin: 24px 0;
+}
+
+.hero h1 span {
+  color: #a99aff;
+}
+
+.hero p {
+  max-width: 650px;
+  color: #b2bdd2;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 15px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary {
+  background: #8265f5;
+  color: white;
+}
+
+.secondary {
+  border: 1px solid #56627a;
+  color: white;
+}
+
+.section {
+  padding: 85px 10%;
+  scroll-margin-top: 24px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  color: #b2bdd2;
+  max-width: 700px;
+  line-height: 1.8;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.tech-card {
+  padding: 24px;
+  background: #141d30;
+  border: 1px solid #29344c;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.footer {
+  padding: 30px;
+  text-align: center;
+  color: #8794ac;
+  border-top: 1px solid #202b42;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar nav {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    padding: 75px 7%;
+  }
+
+  .section {
+    padding: 65px 7%;
+  }
+}
