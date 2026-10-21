@@ -46,31 +46,36 @@ const proyectos: Proyecto[] = [
   github: 'https://github.com/Alexnarea/portafolio-personal',
   demo: 'https://portafolio-personal-psi-ten.vercel.app/',
 },
-  {
-    nombre: 'API Monitor Lab',
-    categoria: 'Backend y APIs',
-    descripcion:
-      'Proyecto de aprendizaje orientado al desarrollo ' +
-      'de una plataforma para supervisar servicios web ' +
-      'y APIs REST.',
-    objetivo:
-      'Construir una herramienta que permita comprobar ' +
-      'la disponibilidad de servicios, registrar ' +
-      'resultados y facilitar la detección de fallos.',
-    funcionalidades: [
-      'Endpoint de salud implementado',
-      'Backend desarrollado con Spring Boot',
-      'Monitoreo y registro de resultados planificados',
-    ],
-    tecnologias: [
-      'Java',
-      'Spring Boot',
-      'Maven',
-      'REST API',
-    ],
-    estado: 'En desarrollo',
-    participacion: 'Desarrollo y aprendizaje práctico',
-  },
+  
+{
+  nombre: 'API Monitor Lab',
+  categoria: 'Backend y APIs REST',
+  descripcion:
+    'Prototipo funcional de comprobación de servicios web, ' +
+    'desarrollado con Kotlin y Spring Boot mediante ' +
+    'una arquitectura de controlador REST y servicio.',
+  objetivo:
+    'Construir progresivamente una herramienta para ' +
+    'verificar la disponibilidad de APIs, analizar ' +
+    'respuestas HTTP y detectar posibles fallos.',
+  funcionalidades: [
+    'Endpoint REST GET /api/monitor/check probado',
+    'Solicitud HTTP externa con respuesta 200 verificada',
+    'Configuración de tiempos máximos de conexión y solicitud',
+    'Separación entre controlador y lógica de servicio',
+    'Historial, monitoreo periódico y alertas pendientes',
+  ],
+  tecnologias: [
+    'Kotlin',
+    'Spring Boot',
+    'Java HttpClient',
+    'Maven',
+    'APIs REST',
+  ],
+  estado: 'Prototipo funcional',
+  participacion: 'Desarrollo, integración HTTP y pruebas',
+},
+
   {
     nombre: 'Local AI Studio',
     categoria: 'Inteligencia Artificial',
