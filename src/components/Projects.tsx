@@ -8,6 +8,8 @@ type Proyecto = {
   tecnologias: string[]
   estado: string
   participacion: string
+  github?: string
+  demo?: string
   redes?: {
     nombre: string
     url: string
@@ -15,6 +17,35 @@ type Proyecto = {
 }
 
 const proyectos: Proyecto[] = [
+    {
+  nombre: 'Portafolio profesional',
+  categoria: 'Desarrollo web',
+  descripcion:
+    'Sitio web profesional desarrollado para presentar ' +
+    'mi experiencia, proyectos y servicios tecnológicos.',
+  objetivo:
+    'Crear una presencia digital pública que permita ' +
+    'a empresas, reclutadores y clientes conocer ' +
+    'mi perfil y contactar conmigo.',
+  funcionalidades: [
+    'Diseño adaptable a dispositivos móviles',
+    'Navegación por secciones y descarga de CV',
+    'Publicación continua desde GitHub hacia Vercel',
+    'Auditoría de rendimiento y accesibilidad con Lighthouse',
+  ],
+  tecnologias: [
+    'React',
+    'TypeScript',
+    'Vite',
+    'CSS',
+    'GitHub',
+    'Vercel',
+  ],
+  estado: 'Publicado',
+  participacion: 'Desarrollo, pruebas y despliegue',
+  github: 'https://github.com/Alexnarea/portafolio-personal',
+  demo: 'https://portafolio-personal-psi-ten.vercel.app/',
+},
   {
     nombre: 'API Monitor Lab',
     categoria: 'Backend y APIs',
@@ -204,6 +235,32 @@ function Projects() {
                 {proyecto.participacion}
               </strong>
             </div>
+
+            {(proyecto.github || proyecto.demo) && (
+  <div className="project-links">
+    {proyecto.github && (
+      <a
+        href={proyecto.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Ver código de ${proyecto.nombre} en GitHub`}
+      >
+        Ver código ↗
+      </a>
+    )}
+
+    {proyecto.demo && (
+      <a
+        href={proyecto.demo}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Ver sitio de ${proyecto.nombre}`}
+      >
+        Ver sitio ↗
+      </a>
+    )}
+  </div>
+)}
 
             
 {proyecto.redes && proyecto.redes.length > 0 && (

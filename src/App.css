@@ -982,3 +982,48 @@ body {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Enlaces de proyectos */
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border: 1px solid #6655b8;
+  border-radius: 9px;
+  background: #1c1835;
+  color: #f5f3ff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.project-links a:hover {
+  background: #302554;
+  border-color: #a78bfa;
+}
+
+.project-links a:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-links a {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
